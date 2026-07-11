@@ -16,11 +16,18 @@ I'm not sure if this device supports cloudcutter - I just flashed it via UART. I
 
 This unit has a bi-colour red and blue LED. Only the blue is programmable, the red is connected in hardware to the relay status.
 
+![Device from front](./1.jpg "Device from front" =40%x) ![Device from rear including sticker](./2.jpg "Device from rear including sticker" =40%x)
+
 ### Disassembly
 
 This unit is easy to disassemble. There are two screws hidden under small caps on the rear. After unscrewing those, using a guitar pick around the little gap to loosen the clips and the unit will come apart. There are two more smaller screws holding the PCB to the remaining half of the case.
 
 You can flash directly to the outlet with a USB to serial adapter. You'll probably need to solder wires to the module but it can remain connected to the PCB. You can power the board with 5V (where it's marked on the PCB or at the end of the diode markked D5) if you want to use the relay. In that case leave the 3.3V disconnected but make sure your UART RX and TX lines are still 3.3V.
+
+![PCB from side](./3.jpg "PCB from side")
+![PCB from top](./4.jpg "PCB from top")
+![PCB from bottom](./5.jpg "PCB from bottom")
+![CB2S Module](./6.jpg "CB2S Module")
 
 ## GPIO pinout
 
@@ -44,6 +51,8 @@ esphome:
 
 bk72xx:
   board: cb2s
+
+logger:
 
 wifi:
   ap:
