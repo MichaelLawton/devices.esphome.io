@@ -45,46 +45,5 @@ You can flash directly to the outlet with a USB to serial adapter. You'll probab
 
 ## Basic Configuration
 
-```yaml
-esphome:
-  name: brilliant-smart-wifi-plug
-  friendly_name: Brilliant Smart Wifi Plug
-
-bk72xx:
-  board: cb2s
-
-logger:
-
-wifi:
-  ap:
-
-sensor:
-  - platform: internal_temperature
-    name: "BK7231N Internal Temperature"
-    update_interval: 3s
-  - platform: wifi_signal
-    name: WiFi Signal
-    id: sensor_wifi_signal_1
-
-binary_sensor:
-  - platform: gpio
-    id: binary_switch
-    pin:
-      number: P26
-      inverted: true
-      mode:
-        input: true
-    on_press:
-      - switch.toggle: switch_1
-
-switch:
-  - platform: gpio
-    name: Socket
-    id: switch_1
-    pin: P6
-
-status_led:
-  pin:
-    number: P24
-    inverted: true
+```yaml file=config.yaml 
 ```
