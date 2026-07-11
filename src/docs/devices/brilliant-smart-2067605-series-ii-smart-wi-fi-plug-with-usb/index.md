@@ -32,16 +32,16 @@ You can flash directly to the outlet with a USB to serial adapter. You'll probab
 
 ## GPIO pinout
 
-| PIN | GPIO # |   Component         |
-|-----|--------|---------------------|
-|  2  | P6     | LED SPOTLIGHT       |
-| 11  | P26    | Button (Inverted)   |
-|  9  | P24    | Blue LED (Inverted) |
-|  3  | GND    |         GND         |
-|  1  | 3V3    |         3V3         |
-|  7  | TX (P11)    |         TX          |
-|  5  | RX (P10)    |         RX          |
-| 10  | CEN    |   FOR FLASH         |
+| PIN | GPIO #   | Component             |
+|-----|----------|-----------------------|
+| 2   | P6       | LED SPOTLIGHT         |
+| 11  | P26      | Button (Inverted)     |
+| 9   | P24      | Blue LED (Inverted)   |
+| 3   | GND      | GND                   |
+| 1   | 3V3      | 3V3                   |
+| 7   | TX (P11) | TX                    |
+| 5   | RX (P10) | RX                    |
+| 10  | CEN      | FOR FLASH             |
 
 ## Basic Configuration
 
@@ -77,15 +77,14 @@ binary_sensor:
     on_press:
       - switch.toggle: switch_1
 
-status_led:
-  pin:
-    number: P24
-    inverted: true
-
 switch:
   - platform: gpio
     name: Socket
     id: switch_1
     pin: P6
 
+status_led:
+  pin:
+    number: P24
+    inverted: true
 ```
