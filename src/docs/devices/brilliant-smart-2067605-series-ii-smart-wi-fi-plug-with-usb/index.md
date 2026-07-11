@@ -45,7 +45,7 @@ In that case leave the 3.3V disconnected but make sure your UART RX and TX lines
 
 | PIN | GPIO #   | Component             |
 |-----|----------|-----------------------|
-| 2   | P6       | LED SPOTLIGHT         |
+| 2   | P6       | Relay                 |
 | 11  | P26      | Button (Inverted)     |
 | 9   | P24      | Blue LED (Inverted)   |
 | 3   | GND      | GND                   |
