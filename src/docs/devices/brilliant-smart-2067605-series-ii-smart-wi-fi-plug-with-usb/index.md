@@ -16,7 +16,8 @@ I'm not sure if this device supports cloudcutter - I just flashed it via UART. I
 
 This unit has a bi-colour red and blue LED. Only the blue is programmable, the red is connected in hardware to the relay status.
 
-![Device from front](./1.jpg "Device from front" =40%x) ![Device from rear including sticker](./2.jpg "Device from rear including sticker" =40%x)
+![Device from front](./1.jpg "Device from front")
+![Device from rear including sticker](./2.jpg "Device from rear including sticker")
 
 ### Disassembly
 
