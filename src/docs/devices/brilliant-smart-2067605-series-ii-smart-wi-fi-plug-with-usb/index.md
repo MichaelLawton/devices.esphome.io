@@ -4,7 +4,7 @@ date-published: 2026-07-11
 type: plug
 standard: au
 board: bk72xx
-made-for-esphome: False
+made-for-esphome: false
 difficulty: 4
 ---
 
