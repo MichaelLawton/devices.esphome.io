@@ -28,6 +28,7 @@ Make sure your UART RX and TX lines are 3.3V. I only connected GND, TX and RX an
 Insert the last battery as you're trying to connect with ltchiptool to put it in program mode.
 
 ### Board overview
+
 The board uses the PIR sensor BS-612 from Senba Sensing Technology.
 The PIR itself and all the surrounding components are powered by a 2.5V LDO.
 
