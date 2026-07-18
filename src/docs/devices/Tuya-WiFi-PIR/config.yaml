@@ -10,12 +10,12 @@ wifi:
   output_power: 8.5dB
   ap:
 
-sensor:  
+sensor:
   - platform: internal_temperature
     id: bk_temp
     name: "BK7231N Internal Temperature"
     update_interval: 1h
-    
+
   - platform: adc
     pin: P23
     id: batt_v
@@ -25,13 +25,13 @@ sensor:
     accuracy_decimals: 2
     unit_of_measurement: V
     filters:
-     - multiply: 1.91516709512 # voltage calibration
+      - multiply: 1.91516709512 # voltage calibration
     icon: "mdi:battery"
-    
+
   - platform: wifi_signal
     name: "WiFi Signal"
     update_interval: 1h
-    
+
 binary_sensor:
   - platform: gpio
     pin:
@@ -45,8 +45,8 @@ binary_sensor:
     on_press:
       - light.turn_on: led
       - delay: 2s
-      - light.turn_off: led        
-              
+      - light.turn_off: led
+
   - platform: gpio
     id: button
     name: "Button"
@@ -56,8 +56,8 @@ binary_sensor:
         input: true
         pullup: false
         pulldown: false
-      inverted: true    
-      
+      inverted: true
+
 text_sensor:
   - platform: uptime
     name: "Uptime"
@@ -76,8 +76,8 @@ light:
     name: "Status LED"
     internal: true
     pin: P26
-      
-output:      
+
+output:
   - id: vr1a
     platform: gpio
     pin:
