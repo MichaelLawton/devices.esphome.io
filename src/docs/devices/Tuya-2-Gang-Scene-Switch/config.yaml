@@ -25,7 +25,7 @@ sensor:
     accuracy_decimals: 2
     unit_of_measurement: V
     filters:
-     - multiply: 2.35071090047 # voltage calibration
+      - multiply: 2.35071090047 # voltage calibration
     icon: "mdi:battery"
 
   - platform: wifi_signal
