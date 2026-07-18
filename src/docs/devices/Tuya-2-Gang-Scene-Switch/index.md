@@ -15,7 +15,7 @@ It has the [CBU module](https://docs.libretiny.eu/boards/cbu/) with the Beken BK
 
 I'm not sure if this device supports cloudcutter - I just flashed it via UART. It might support it if not upgraded
 
-![Scene Switch Case](scene-switch.jpg.jpg "Scene Switch Case")
+![Scene Switch Case](scene-switch.jpg "Scene Switch Case")
 
 ### Disassembly
 
