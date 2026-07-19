@@ -1,14 +1,14 @@
 ---
-title: "Tuya WiFi PIR Motion Sensor"
-date-published: 2026-07-18
-type: sensor
-standard: global
+title: "Goldair GCW230 Ceramic Wall Heater with WiFi 2kW"
+date-published: 2026-07-20
+type: misc
+standard: au
 board: rtl87xx
 made-for-esphome: false
 difficulty: 4
 ---
 
-## Tuya WiFi PIR Motion Sensor
+## Goldair GCW230 Ceramic Wall Heater with WiFi 2kW
 
 It has the [WBR3 module](https://docs.libretiny.eu/boards/wbr3/) with the Realtek RTL8720CF.
 
@@ -32,7 +32,7 @@ The button is on it's own PCB.
 
 Note that GND is live with 230VAC! Don't try to touch it or connect it to anything when open.
 
-![Power Board Front](power-board.jpg "Power Board Front")
+![Power Board Front](power-board-front.jpg "Power Board Front")
 ![Power Board Rear](power-board.jpg "Power Board Rear")
 
 ### WiFi Board overview
@@ -46,11 +46,13 @@ There's another microcontroller connected to the first one that controls the dis
 To use this board with ESPHome you will need to decode the serial commands between the WBR3 module and the first microcontroller.
 That's likely fairly simple, but unfortunately I damaged my WiFi board beyond repair.
 
+There's a small chance it uses the same commands as the [Goldair GPOC2415](../goldair-gpoc2415-smart-heater/)
+
 The other option is to create a new WiFi board.
 It will just need a 3.3V regulator, some sort of 5V level translation to interface with the power board,
 and optionally an LED display and driver.
 
-This will allow finer control over the heater.
+This will allow finer control over the heater and allow reading back the temperature.
 
 ![WiFi Board Front](wifi-board-front.jpg "WiFi Board Front")
 ![WiFi Board Rear](wifi-board.jpg "WiFi Board Rear")
@@ -66,4 +68,4 @@ This will allow finer control over the heater.
 |     | PA15 | RX2            |
 |     | PA00 | Strapping pin  |
 | 15  | PA13 | RX0            |
-| 16  | PA14 | RX1            |
+| 16  | PA14 | TX0            |
